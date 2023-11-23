@@ -1,0 +1,148 @@
+\input{../header.tex}
+
+\begin{document}
+    \pagenumbering{roman}
+
+    \vspace{2cm}
+    
+    \title{Datenübertragung}
+    
+    \vspace{1cm}
+    \maketitle
+    \thispagestyle{empty}
+    \newpage
+
+    \section*{Aufgabe 2}
+    \subsection*{2.1}
+    Wie lange braucht ein Bit (oder ein elektrisches Signal), wenn es über eine $1000$ Meter lange Kupferleitung mit
+    einem NVP von $0.7$ übertragen wird? (rechnen Sie mit einer Vakuum-Lichtgeschwindigkeit $c_0$ von $ \SI{3e8}{\meter\per\second}$)
+
+    \begin{align}
+        c &= c_0 \cdot NVP\\
+        c &= \frac{s}{t}  \qquad \vert \cdot t \vert:c\\
+        t &= \frac{s}{c_0 \cdot NVP}\\
+        t &= \frac{\SI{1000}{\meter}}{\SI{3e8}{\meter\per\second}\cdot 0.7}\\
+        &\approx 4,77 \cdot 10^{-6} \si{\second}
+    \end{align}
+
+    \subsection*{2.2}
+    Wie lange braucht ein Bit (oder ein elektrisches Signal), wenn es über eine $1000$ Meter lange Glasfaserleitung mit
+    einem Kernbrechungsindex von $n = 1.4$ übertragen wird? 
+
+    \begin{align}
+        c &= \frac{c_0}{n} \\
+        c &= \frac{s}{t} \\
+        t &= \frac{s\cdot n}{c_0}\\
+        t &\approx \SI{4.67e-6}{\second}
+    \end{align}
+    
+    \subsection*{2.3}
+
+    Die Übertragung sind relativ gleich schnell .
+
+    \section*{Aufgabe 3}
+    Sie wolle eine Datei von ihrem Filserver in Ihrem Betrieb herunterladen.
+
+    \subsection*{3.1}
+
+    Berechnen Sie, wie lange der Dateidownload dauert, wenn die Datei $1 \si{\giga\byte}$ groß ist und über einer $100$
+    Base-T-Netzwerkleitung übertragen wird.
+
+    \begin{align}
+        t &= \frac{\SI{8}{\giga\bit}}{\SI{0.1}{\giga\bit\per\second}}\\
+          &= \SI{80}{\second}
+    \end{align}
+    Angaben gelten nur bei maximaler Übertragungsgeschwindigkeit.
+
+    \subsection*{3.2}
+
+    An einem Arbeitsplatz in der Marketingabteilung werden durch Videoschnitt große Dateien erzeugt, die innerhalb
+    von einer halben Sekunde zum Fileserver übertragen werden sollen. Wie groß muss die Datenübertragungsrate der
+    Netzwerkleitung sein? Berechnen Sie die Datenrate bei einer Dateigröße von $\SI{1}{\mega\byte}$, $\SI{10}{\mega\byte}$,
+    $\SI{100}{\mega\byte}$ und $\SI{1000}{\mega\byte}$.
+    
+    \begin{align}
+        C &= \frac{D}{t}\\
+        \intertext{
+            Für $\SI{1}{\mega\byte}$ ergibt das:
+        }
+        C &= \frac{\SI{1}{\mega\byte}}{\SI{0.5}{\second}}\\
+          &= \SI{2}{\mega\byte\per\second}
+        \intertext{
+            Für $\SI{10}{\mega\byte}$ ergibt das:
+        }
+        C &= \frac{\SI{10}{\mega\byte}}{\SI{0.5}{\second}}\\
+          &= \SI{20}{\mega\byte\per\second}
+        \intertext{
+            Für $\SI{100}{\mega\byte}$ ergibt das:
+        }
+        C &= \frac{\SI{100}{\mega\byte}}{\SI{0.5}{\second}}\\
+          &= \SI{200}{\mega\byte\per\second}
+        \intertext{
+            Für $\SI{1}{\giga\byte}$ ergibt das:
+        }
+        C &= \frac{\SI{1}{\giga\byte}}{\SI{0.5}{\second}}\\
+          &= \SI{2}{\giga\byte\per\second}
+    \end{align}
+
+    \subsection*{3.3}
+
+    Wie lange braucht ein Datenpaket von $\SI{1000}{\byte}$ Größe, bis es über eine 100-Mbps-Netzwerkleitung komplett gesendet wurde?
+
+    \begin{align}
+        t &= \frac{D}{C}\\
+          &= \frac{\SI{8000}{\bit}}{\SI{100}{\mega\bit\per\second}}\\
+          &= \SI{80}{\micro\second}
+    \end{align}
+
+    \subsection*{3.4}
+
+    Sie wollen ein Datenpaket von $\SI{100}{\byte}$ über eine Strecke von Flensburg nach Garmisch-Partenkirchen ($\SI{1000}{\kilo\meter}$)
+    übertragen. Wie lange ist das Paket näherungsweise auf einer Leitung unterwegs, bis es beim Empfänger ankommt? Rechnen Sie mit einer Signalgeschwindigkeit
+    $c_{\text{Leitung}}$ von $\SI{2e8}{\meter\per\second}.$
+    Randbedingung: Wir gehen von der reinen Laufzeit auf der Leitung aus. Router-Durchleitungszeiten u.Ä. werden
+    vernachlässigt.
+
+    \begin{align}
+        c_{\text{Leitung}} &= \frac{s}{t}\\
+        t_{\text{Übertragungszeit}} &= \frac{s}{c_{\text{Leitung}}}\\
+          &= \frac{\SI{1000e3}{\meter}}{\SI{2e8}{\meter\per\second}}\\
+          &= \SI{5}{\milli\second}
+    \end{align}
+
+    \subsection*{3.5}
+
+    Wie lange dauert der gesamte Datentransfer vom Senden des erste Bits bis zum Empfang des letzten Bits? Die Leitung hat eine Übertragunskapazität
+    C von $\SI{25}{\mega\bit\per\second}$. Welche Schlussfolgerung können Sie daraus ziehen?
+
+    \begin{align}
+      t_{\text{Verbindungsaufbau}} &= \frac{D}{C}\\
+        &= \frac{\SI{100}{\byte}}{\SI{25}{\mega\bit\per\second}}\\
+        &= \SI{32}{\micro\second}\\
+      t_{\text{Übertragungsdauer}} &= t_{\text{Verbindungsaufbau}} + t_{\text{Übertragungszeit}}\\
+        &= \SI{5.032}{\milli\second}
+    \end{align}
+
+    
+    \subsection*{3.6}
+
+    Für die Datensicherung steht einer externe SSD-Festplatte mit USB 3.0-Schnittstelle ($\SI{450}{\mega\bit\per\second}$)
+    und eSATA II-Schnittstelle ($\SI{300}{\mega\bit\per\second}$) zur Verfügung. Berechnen Sie die Zeit, die jeweils für
+    die Sicherung einer Datenmenge von $\SI{8}{\gibi\byte}$ nötig ist.
+
+    \begin{align}
+      t &= \frac{D}{C}\\
+      \intertext{
+        Für die SSD-Festplatte ergibt sich:
+      }
+        &= \frac{\SI{8}{\gibi\byte}}{\SI{450}{\mega\bit\per\second}}\\
+        &= \frac{8 \cdot 8 \cdot 1024^{3} \si{bit} }{\SI{450e6}{\bit\per\second}}\\
+        &\approx \SI{152.71}{\second}\\
+    \end{align}
+
+    \subsection*{4 Berechnen Sie die Fahrstrecke eines Autos zwischen dem Absenden einer Nachricht und dem Empfang der Antwort.}
+    
+    
+
+
+\end{document}
