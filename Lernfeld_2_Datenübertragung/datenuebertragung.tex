@@ -141,6 +141,37 @@
     \end{align}
 
     \subsection*{4 Berechnen Sie die Fahrstrecke eines Autos zwischen dem Absenden einer Nachricht und dem Empfang der Antwort.}
+
+    In einem selbstfahrenden Kfz sind viele Sensoren verbaut. Die Sensordaten werde per Mobilfunk an die nächstgelegene
+    Mobilfunbasisstation übertragen. Von dort werden die Daten über Lichtwellenleiter über das Internet in ein Clou-Datacenter übertragen.
+    Im Datacenter erfolgt die Verrechnung dieser Daten mit bereits vorliegenden Daten.
+    Das Ergebnis dieser Berechnungen wird anschließend wieder auf demselben Weg zurück zum Kfz Übertragen.
+
+    Nehmen wir an, das Fahrzeug befindet sich in München und das Cloud-Datacenter befindet sich in Dublin, Irland.
+    So liegen etwa 1750 Kilometer Glasfaserstrecke (einfacher Weg) dazwischen. Ein Datenpaket braucht, um diese Strecke 
+    zurückzulegen, folgende Zeit (Rechnen Sie mit einer gerundeten lichtgeschwindigkeit $c_0 = \SI{3e8}{\meter\per\second}$ und einem n von 1,5 beim Lichtwellenleiter):
+
+    \begin{align}
+      c &= \frac{c_0}{n}\\
+        &= \SI{2e8}{\meter\per\second}\\
+      t &= \frac{s}{c}\\
+        &= \frac{\SI{1750}{\kilo\meter}}{\SI{2e8}{\meter\per\second}}\\
+        &= \SI{8.75}{\milli\second}
+    \end{align}
+
+    Hin und zurück ergibt das die doppelte Laufzeit.
+    Nehmen wir weiter an, das Fahrzeug fährt mit $\SI{100}{\kilo\meter\per\hour} $. Welche Strecke legt das Auto dann in der zeit zurück, in der die Daten unterwegs sind?
+
+
+    \begin{align}
+      v &= \frac{s}{t_{\text{Laufzeit}}}\\
+      s &= v \cdot t_{\text{Laufzeit}} \\
+        &= \SI{100}{\kilo\meter\per\hour} \cdot 2 \cdot \SI{8.75}{\milli\second}\\
+        &\approx \SI{27.78}{\meter\per\second} \cdot 2 \cdot \SI{8.75}{\milli\second} \\
+        &\approx \SI{486.11}{\milli\meter}
+    \end{align}
+  
+  
     
     
 
