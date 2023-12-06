@@ -145,24 +145,6 @@
             
             Ein Gleitschraubentransformator kann genutzt werden, um den Hohlleiter zu einer gegebenen und unveränderlichen Impedanz anzupassen.\\
             Das SWR kann über verschiedene Methoden bestimmt werden, wobei drei von diesen in Abschnitt \ref{ssec:4.3} beschrieben sind.
-            %\subsubsection{3dB-Methode}
-                %Das Messen starker Welligkeiten erfordert tieferes Einbringen der Messsonde, was zu Feldverzerrungen und hohen Leistungen am Detektor führt, wodurch dieser
-                %nicht in seinem vorgesehenem Arbeitsbereich misst.
-                %Um dies zu umgehen wird die \enquote{$\SI{3}{\decibel}$-Methode} angewendet.
-                %Dafür wird der Abstand zwischen zwei Punkten gemessen, wo die Ausgangsspannung am Detektor 
-                %einen Faktor zwei vom Minimum erzielt. Das SWR $S$ ergibt sich dann über die Formel
-                %\begin{align}
-                %    S &= \sqrt{1+\frac{1}{\sin ^2 \frac{\pi (d_1-d_2)}{\lambda_g}}} \label{eq:2}, \text{\cite{Mikro}}
-                %\end{align}
-                %Hier beschreibt $d_{1,2}$ die Schlittenstellung am Hohlleiter an einem Vollausschlag im SWR-Meter links und rechts vom Minimum.
-            %\subsubsection{Abschwächer-Methode}
-                %Bei einem SWR von größer als 10 wird die \enquote{Abschwächer-Methode} verwendet.
-                %Hierbei wird ein Abschwächer genutzt, welcher das Ausgangssignal vom Maximum und Minimum angleicht. % Formulierung vllt. noch etwas überarbeiten
-                %Mit der Einstellung des Abschwächers $(A_2-A_1) $ wird dann das SWR berechnet
-                %\begin{align}
-                %    A_2-A_1 = 20 \log S \label{eq:3}. \text{\cite{Mikro}}
-                %\end{align}
-                %Dabei beschreibt $A_{1,2}$ die Einstellung des Dämpfungsglieds, an den Stellungen, wo die beiden Signale vom Minimum und Maximum gleich werden.
 
 %
 % -- Aufbau -- %
@@ -190,23 +172,6 @@
         Die aus dem Klystron austretenden Mikrowellen können nämlich theoretisch reflektiert werden und das Klystron zerstören.
         Durch den Einweggleichrichter wird dies verhindert, da dieser nur Elektromagnetische Wellen in eine Richtung durchlässt.
 
-        %Außerdem werden ein Frequenzmessgerät, Dämfungsglied, Stehwellendetektor, ein Abschluss und ein verstellbarer Kurzschluss, ein Gleitschraubentransformator, ein Abgeschlossener Hohlleiter mit Diodendetektor und zuletzt ein SWR-Meter und ein Oszilloskop gebraucht.
-
-        %Dieser ist ein Hohlleiter mit einem verschiebbaren Diodendetektor.
-        %
-        %Der Abschluss, oder auch Wellensumpf genannt, ist ein Bauteil welches die Mikrowellenstrahlung komplett absorbiert.
-        %Der Kurzschluss hingegen soll möglichst die gesamte Amplitude der Strahlung reflektieren.
-        %
-        %Dieser ist ein Hohlleiter mit einer Öffnung in der eine Schraube eingelassen ist, welche sich mit einer Genauigkeit im $\si{\milli\meter}$-Bereich in den Hohlleiter einführen lässt.
-        
-        %Für alle Versuchsaufbauten muss zunächst das Klystron-Netzteil an das Klystron angeschlossen werden.
-        %Hierbei muss darauf geachtet werden, dass der Ausgang der Beschleunigungsspannung und der Reflektorspannung korrekt angeschlossen sind.
-
-        %Als nächstes wird der Einweggleichrichter am Ausgang des Klystrons montiert.
-        %Der Gleichrichter muss ausdrücklich als erstes Bauteil hinter dem Klystron montiert werden, unabhängig vom Versuchsaufbau, um Beschädigung des Geräts zu vermeiden.
-
-        %Nun wird das Frequenzmessgerät an das Ende des Einweggleichrichters, und das Dämpfungsglied am Ende des Frequenzmessers angeschraubt.
-        %Auch diese Bauteile sind für alle Messungen zu verwenden und es sollte für eine erfolgreiche Durchführung der Versuche auf die richtige Reihenfolge in der Montage geachtet werden.
         \subsection{Modenmessung}
         Eine schematische Darstellung des Versuchsaufbaus ist in Abbildung \ref{fig:3} zu erkennen.
         Um nun die Moden des Klystrons zu messen muss hinter dem Dämpfungsglied zunächst ein Diodendetektor montiert werden.
@@ -247,7 +212,6 @@
     \section{Durchführung}
         Zu Beginn der Durchführung des Versuches wird das Klystron etwa eine Minute angeschaltet und vorgeheizt.
         Hierzu wird das Netzteil angeschaltet und der \enquote{Res./Ref.}-Knopf zunächst ausgeschaltet.
-        %Nach dieser Wartezeit wird der zuvor genannte Knopf angeschaltet und mit der Messung begonnen.
         \subsection{Modenmessung}
             In diesem Versuchsteil werden sowohl die Moden, als auch die elektronische Abstimmung des Klystrons untersucht.
             
@@ -360,7 +324,7 @@
                 
             \subsubsection{Abschwächer-Methode}
                 Bei einem SWR von größer als 10 wird die \enquote{Abschwächer-Methode} verwendet.
-                Hierbei wird ein Abschwächer genutzt, welcher das Ausgangssignal vom Maximum und Minimum angleicht. % Formulierung vllt. noch etwas überarbeiten
+                Hierbei wird ein Abschwächer genutzt, welcher das Ausgangssignal vom Maximum und Minimum angleicht. 
                 Mit der Einstellung des Abschwächers $(A_2-A_1) $ wird dann das SWR berechnet
                 \begin{align}
                     A_2-A_1 = 20 \log S \label{eq:3}. \text{\cite{Mikro}}
